@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Datos</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+
+
+</head>
+<body>
+    <form method="POST">
+        <h1>Ingreso de Datos Financieros</h1>
+
+        <div class="row">
+            <div class="column">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+            </div>
+            <div class="column">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="monto">Monto:</label>
+                <input type="text" id="monto" name="monto" required><br><br>
+            </div>
+            <div class="column">
+                <label for="moneda">Moneda:</label>
+                <select id="moneda" name="moneda" required>
+                    <option value="Dolar">Dólar</option>
+                    <option value="Peso arg">Peso Argentino</option>
+                </select><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="descripcion">Descripcion:</label>
+                <input type="text" id="descripcion" name="descripcion" required><br><br>
+            </div>
+        </div>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
